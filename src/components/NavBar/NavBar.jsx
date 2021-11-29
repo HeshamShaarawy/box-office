@@ -7,8 +7,7 @@ const NavBar = ({ user, handleLogout }) => {
     <>
       <li class="nav-item">
         <Link to="/profile" class="nav-link active text-danger">
-          Welcome User
-          {/* Welcome, {`${user.name.toUpperCase()}`} */}
+          Welcome, {`${user.name.toUpperCase()}`}
         </Link>
       </li>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -57,7 +56,7 @@ const NavBar = ({ user, handleLogout }) => {
               <li class="nav-item">
                 <Link to="/cart" class="nav-link">
                   <i className="fas fa-shopping-cart">
-                    <span class="badge bg-danger rounded-pill sup">Cart</span>
+                    <span class="badge bg-danger rounded-pill sup">ORDERS</span>
                   </i>
                 </Link>
               </li>
