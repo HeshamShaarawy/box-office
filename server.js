@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require('cors');
 const path = require("path");
 const favicon = require("serve-favicon");
 const logger = require("morgan");
@@ -10,6 +11,7 @@ require("./config/database");
 
 app.use(logger("dev"));
 app.use(express.json());
+app.use(cors());
 
 if (process.env.NODE_ENV === "production") {
   app.use(favicon(path.join(__dirname, "build", "favicon.ico")));
