@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 
+
 const NavBar = ({ user, handleLogout }) => {
   let nav = user ? (
     <>
@@ -54,9 +55,24 @@ const NavBar = ({ user, handleLogout }) => {
             <ul class="navbar-nav ms-md-auto">
               {nav}
               <li class="nav-item">
-                <Link to="/cart" class="nav-link">
+                <Link to="/events" class="nav-link">
                   <i className="fas fa-shopping-cart">
-                    <span class="badge bg-danger rounded-pill sup">ORDERS</span>
+                    <span class="fas fa-user-circle">Gift List</span>
+                  </i>
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link to="/create" class="nav-link">
+                  <i className="fas fa-shopping-cart">
+                    <span class="badge bg-danger rounded-pill sup">Load a bombshell </span>
+                  </i>
+                </Link>
+              </li>
+              
+              <li class="nav-item">
+                <Link to="/person" class="nav-link">
+                  <i className="fas fa-shopping-cart">
+                    <span class="badge bg-danger rounded-pill sup">Name a Person</span>
                   </i>
                 </Link>
               </li>

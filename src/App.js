@@ -9,6 +9,11 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import userService from "./utils/userService";
 import eventService from "./utils/eventService"
 import EventPage from "./pages/EventPage/EventPage";
+import EventsList from "./components/Events/events-list.component";
+import CreateEvent from "./components/Events/create-event.component";
+import CreatePerson from "./components/Events/create-person.component";
+import EditEvent from "./components/Events/edit-event.component";
+
 class App extends Component {
   constructor() {
     super();
@@ -48,7 +53,12 @@ class App extends Component {
           </header>
           <main class="container-fluid">
             <Switch>
-              <Route exact path="/" render={() => <EventPage events={events}/>} />
+              <Route exact path="/" render={() => <EventPage />} />
+              <Route exact path="/events" render={() => <EventsList events={events}/>} />
+              <Route exact path="/create" render={() => <CreateEvent events={events}/>} />
+              <Route exact path="/person" render={() => <CreatePerson/>} />
+              {/* <Route exact path="/edit/:id"  render={() => <EditEvent />} /> */}
+              <Route path="/edit/:id" component={EditEvent} />
               <Route
                 exact
                 path="/signup"
