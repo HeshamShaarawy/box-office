@@ -28,7 +28,7 @@ export default class CreatePerson extends Component {
 
     console.log(person);
 
-    axios.post('http://localhost:3001/api/persons/add', person)
+    axios.post('/api/persons/add', person)
       .then(res => console.log(res.data));
 
     this.setState({
