@@ -42,7 +42,7 @@ export default class CreatePerson extends Component {
         <h3>Create New Person</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group"> 
-            <label>Personname: </label>
+            <label>Person Name: </label>
             <input  type="text"
                 required
                 className="form-control"

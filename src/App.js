@@ -53,7 +53,7 @@ class App extends Component {
           </header>
           <main class="container-fluid">
             <Switch>
-              <Route exact path="/" render={() => <EventPage />} />
+              <Route exact path="/" render={() => <EventPage events={events}/>} />
               <Route exact path="/events" render={() => <EventsList events={events}/>} />
               <Route exact path="/create" render={() => <CreateEvent events={events}/>} />
               <Route exact path="/person" render={() => <CreatePerson/>} />
