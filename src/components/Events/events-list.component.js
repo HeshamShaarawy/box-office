@@ -25,7 +25,7 @@ export default class EventsList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3001/api/events/')
+    axios.get('/api/events/')
       .then(response => {
         this.setState({ events: response.data })
       })
@@ -35,7 +35,7 @@ export default class EventsList extends Component {
   }
 
   deleteEvent(id) {
-    axios.delete('http://localhost:3001/api/events/'+id)
+    axios.delete('/api/events/'+id)
       .then(response => { console.log(response.data)});
 
     this.setState({
