@@ -31,10 +31,10 @@ export default class CreatePerson extends Component {
     axios.post('localhost:52528/api/persons/add', person)
       .then(res => console.log(res.data));
 
-      axios.post('https://box-hs.herokuapp.com/api/persons/add', person)
+    axios.post('https://box-hs.herokuapp.com/api/persons/add', person)
       .then(res => console.log(res.data));
     
-    function createPerson(personname){
+    createPerson = (personname) =>{
       const options = {
         method: "POST",
         headers: {
