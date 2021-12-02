@@ -42,7 +42,7 @@ export default class CreatePerson extends Component {
         },
         body: JSON.stringify({ personname: personname})
       };
-      return fetch(/api/persons/add, options)
+      return fetch("/api/persons/add", options)
         .then((res) => res.json())
         .catch((err) => console.log("err", err));
     }
