@@ -7,8 +7,6 @@ import NavBar from "./components/NavBar/NavBar";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import userService from "./utils/userService";
-import eventService from "./utils/eventService"
-import EventPage from "./pages/EventPage/EventPage";
 import EventsList from "./components/Events/events-list.component";
 import CreateEvent from "./components/Events/create-event.component";
 import CreatePerson from "./components/Events/create-person.component";
@@ -53,7 +51,6 @@ class App extends Component {
           </header>
           <main class="container-fluid">
             <Switch>
-              <Route exact path="/" render={() => <EventPage events={events}/>} />
               <Route exact path="/events" render={() => <EventsList events={events}/>} />
               <Route exact path="/create" render={() => <CreateEvent events={events}/>} />
               <Route exact path="/person" render={() => <CreatePerson/>} />
