@@ -29,7 +29,7 @@ export default class CreatePerson extends Component {
  
 
 
-    axios.post('process.env.REACT_APP_API_URL/api/persons/add', person)
+    axios.post(`${process.env.REACT_APP_API_URL}/api/persons/add`, person)
       .then(res => console.log(res.data));
     
     // function createPerson (personname) {

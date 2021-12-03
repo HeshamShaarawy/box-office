@@ -28,7 +28,7 @@ export default class CreateEvent extends Component {
 
 
   componentDidMount() {
-    axios.get('process.env.REACT_APP_API_URL/api/persons/')
+    axios.get(`${process.env.REACT_APP_API_URL}/api/persons/`)
       .then(response => {
         if (response.data.length > 0) {
             this.setState({
