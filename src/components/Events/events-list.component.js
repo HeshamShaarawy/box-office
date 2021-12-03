@@ -25,7 +25,7 @@ export default class EventsList extends Component {
   }
 
   componentDidMount() {
-    axios.get('/api/events/')
+    axios.get(`${process.env.REACT_APP_API_URL}/api/events/`)
       .then(response => {
         this.setState({ events: response.data })
       })
@@ -35,7 +35,7 @@ export default class EventsList extends Component {
   }
 
   deleteEvent(id) {
-    axios.delete('/api/events/'+id)
+    axios.delete(`${process.env.REACT_APP_API_URL}/api/events/+id`)
       .then(response => { console.log(response.data)});
 
     this.setState({
