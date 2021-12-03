@@ -30,9 +30,6 @@ class App extends Component {
     this.setState({ user: null });
   };
 
-  async componentDidMount() {
-    await this.getEvents();
-  }
 
 
   render() {
