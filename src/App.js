@@ -34,12 +34,6 @@ class App extends Component {
     await this.getEvents();
   }
 
- getEvents = async () => {
-    const events = await eventService.index();
-    console.log('events', events)
-    this.setState({ events });
-  };
-
 
   render() {
     const { user, events } = this.state;
