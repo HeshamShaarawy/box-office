@@ -3,6 +3,8 @@ import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 
+
+
 export default class CreateEvent extends Component {
   constructor(props) {
     super(props);
@@ -23,6 +25,7 @@ export default class CreateEvent extends Component {
       users: []
     }
   }
+
 
   componentDidMount() {
     axios.get('process.env.REACT_APP_API_URL/api/persons/')

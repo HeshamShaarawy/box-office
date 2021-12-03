@@ -26,30 +26,24 @@ export default class CreatePerson extends Component {
       personname: this.state.personname
     }
 
-    console.log(person);
+ 
 
-  componentDidMount() {
-  componentDidMount() {
-  componentDidMount() {
-  componentDidMount() {
-    axios.post('/api/persons/add', person)
-      .then(res => console.log(res.data));
 
     axios.post('process.env.REACT_APP_API_URL/api/persons/add', person)
       .then(res => console.log(res.data));
     
-    function createPerson (personname) {
-      const options = {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify({ personname: personname})
-      };
-      return fetch("process.env.REACT_APP_API_URL/api/persons/add", options)
-        .then((res) => res.json())
-        .catch((err) => console.log("err", err));
-    }
+    // function createPerson (personname) {
+    //   const options = {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-type": "application/json",
+    //     },
+    //     body: JSON.stringify({ personname: personname})
+    //   };
+    //   return fetch("process.env.REACT_APP_API_URL/api/persons/add", options)
+    //     .then((res) => res.json())
+    //     .catch((err) => console.log("err", err));
+    // }
 
     
 
